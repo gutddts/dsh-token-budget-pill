@@ -1,0 +1,59 @@
+{
+  "name": "dsh-token-budget-pill",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 客户端插件：在对话输入框下方显示 DeepSeek 账户剩余余额与本会话 token 费用估算。",
+  "license": "MIT",
+  "author": "gutddts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gutddts/dsh-token-budget-pill.git"
+  },
+  "homepage": "https://github.com/gutddts/dsh-token-budget-pill#readme",
+  "bugs": {
+    "url": "https://github.com/gutddts/dsh-token-budget-pill/issues"
+  },
+  "icon": "./icon.svg",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "docs/screenshots"
+  ],
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "token",
+    "cost",
+    "balance",
+    "budget",
+    "usage",
+    "credits",
+    "web-ui"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
