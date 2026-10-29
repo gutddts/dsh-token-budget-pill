@@ -61,8 +61,6 @@ npm login
 npm publish --access public
 ```
 
-或者直接在 GitHub 仓库的 **Actions → publish** 里运行，并先添加仓库 Secret `NPM_TOKEN`（值就是第 2 步的 npm token）。
-
 发布后验证：
 
 ```bash
@@ -71,9 +69,23 @@ npm view dsh-token-budget-pill version
 
 ## 6. 别人如何安装
 
+当前仓库还没有发布到 npm，先用 GitHub 安装：
+
 ```bash
-dsh plugin --profile web add dsh-token-budget-pill
+dsh plugin --profile web add github:gutddts/dsh-token-budget-pill
 dsh web
 ```
 
-桌面版把 `web` 换成 `desktop`；也可以在图形的 **设置 → 插件 → 安装插件** 里输入包名。
+或用 tarball：
+
+```bash
+dsh plugin --profile web add https://github.com/gutddts/dsh-token-budget-pill/archive/refs/heads/main.tar.gz
+```
+
+如果以后发布了 npm，就可以直接按包名安装：
+
+```bash
+dsh plugin --profile web add dsh-token-budget-pill
+```
+
+桌面版把 `web` 换成 `desktop`；也可以在图形的 **设置 → 插件 → 安装插件** 里输入对应地址。
