@@ -1,0 +1,6 @@
+# dsh-token-budget-pill profile patch.
+# The Host half is inert; all UI lives in the browser bundle declared by
+# package.json's `dsh.client`.
+- insert:
+    - id: token-budget
+      name: 'dsh-token-budget-pill'
